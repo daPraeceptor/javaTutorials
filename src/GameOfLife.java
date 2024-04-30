@@ -236,8 +236,6 @@ public class GameOfLife {
 
         gameRunning = false;
     }
-
-
     private static void copyMap(boolean[][] sourceMap, boolean[][] destMap) {
         // Copy m1 to m2
         if (sourceMap == null || destMap == null) return;
