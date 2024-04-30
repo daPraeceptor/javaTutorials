@@ -25,7 +25,7 @@ public class GameOfLife {
                                 new Point(-1, 1), new Point(1, -1)};
 
     // Shapes
-    static ArrayList<ArrayList> shapes = new ArrayList<ArrayList>();
+    static ArrayList<ArrayList> shapes = new ArrayList<>();
     static int selected_shape = 0;
     // Map
     static boolean[][] tiles = new boolean[tilesX][tilesY];
@@ -94,7 +94,7 @@ public class GameOfLife {
 
                 // Print text
                 g.setColor (Color.BLACK);
-                String outText = "";
+                String outText;
                 if (!gameRunning) {
                     outText = "Game Paused";
                     g.drawString(outText ,width - 170, margY + (g.getFontMetrics().getHeight() + 2) * 2);
@@ -209,11 +209,7 @@ public class GameOfLife {
                         }
                     }
                     if (tiles[x][y]) {
-                        if (neighbours < 2 || neighbours >= 4) {
-                            nextGen[x][y] = false;
-                        } else {
-                            nextGen[x][y] = true;
-                        }
+                        nextGen[x][y] = neighbours >= 2 && neighbours < 4;
                     } else {
                         if (neighbours == 3)
                             nextGen[x][y] = true;
