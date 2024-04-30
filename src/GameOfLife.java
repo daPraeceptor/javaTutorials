@@ -109,7 +109,6 @@ public class GameOfLife {
             }
         };
         frame.setSize(width, height);
-//        frame.setContentPane(panel);
         frame.add(panel);
         frame.getContentPane().setBackground(paperColor);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
