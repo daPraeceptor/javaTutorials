@@ -36,7 +36,6 @@ public class GameOfLife {
     static Point mPos = null;
     static Timer timer = null;
     public static void main(String[] args) {
-
         // Shapes
         shapes.add(new ArrayList<Point>());
         shapes.get(0).add (new Point (0,0)); // Pixel
@@ -61,6 +60,48 @@ public class GameOfLife {
         shapes.get(3).add (new Point (2,3));
         shapes.get(3).add (new Point (3,3));
         shapes.get(3).add (new Point (4,3));
+        shapes.add(new ArrayList<Point>());
+        shapes.get(4).add (new Point (0,4)); // Glider gun
+        shapes.get(4).add (new Point (1,4));
+        shapes.get(4).add (new Point (0,5));
+        shapes.get(4).add (new Point (1,5));
+
+        shapes.get(4).add (new Point (10,4));
+        shapes.get(4).add (new Point (10,5));
+        shapes.get(4).add (new Point (10,6));
+        shapes.get(4).add (new Point (11,3));
+        shapes.get(4).add (new Point (11,7));
+        shapes.get(4).add (new Point (12,2));
+        shapes.get(4).add (new Point (12,8));
+        shapes.get(4).add (new Point (13,2));
+        shapes.get(4).add (new Point (13,8));
+
+        shapes.get(4).add (new Point (14,5));
+        shapes.get(4).add (new Point (15,3));
+        shapes.get(4).add (new Point (15,7));
+
+        shapes.get(4).add (new Point (16,4));
+        shapes.get(4).add (new Point (16,5));
+        shapes.get(4).add (new Point (16,6));
+        shapes.get(4).add (new Point (17,5));
+
+        shapes.get(4).add (new Point (20,2)); // Box ship
+        shapes.get(4).add (new Point (20,3));
+        shapes.get(4).add (new Point (20,4));
+        shapes.get(4).add (new Point (21,2));
+        shapes.get(4).add (new Point (21,3));
+        shapes.get(4).add (new Point (21,4));
+        shapes.get(4).add (new Point (22,1));
+        shapes.get(4).add (new Point (22,5));
+        shapes.get(4).add (new Point (24,0));
+        shapes.get(4).add (new Point (24,1));
+        shapes.get(4).add (new Point (24,5));
+        shapes.get(4).add (new Point (24,6));
+
+        shapes.get(4).add (new Point (34,2));
+        shapes.get(4).add (new Point (34,3));
+        shapes.get(4).add (new Point (35,2));
+        shapes.get(4).add (new Point (35,3));
 
         // Frames and panel
         JFrame frame = new JFrame("Conway's Game of Life");
@@ -212,7 +253,7 @@ public class GameOfLife {
                         nextGen[x][y] = neighbours >= 2 && neighbours < 4;
                     } else {
                         if (neighbours == 3)
-                            nextGen[x][y] = true;
+                            nextGen[x][y] = true; 
                     }
                 } // for x
             } // for y
